@@ -2,13 +2,18 @@ The goal of the game is to be the Player with the most points when the game ends
 Each player starts with 5 points. Points can increase and decrease as the game progresses, but cannot be negative.
 The game ends when there are no cards remaining in any draw piles.
 
-Players gain and lose points by playing cards. Different types of cards increase/decrease points differently and may affect other players.
+Players gain and lose points by playing cards. Different types of cards increase/decrease
+points differently and may affect other players.
 
-There are 4 types of cards:
+There are 7 types of cards:
 -- Point card: The Player who plays it gains points (6-10 points).
 -- Attack card: Reduces points of another player (by 5-8 points). The Player who plays it also gains points (3-4 points).
 -- Freeze card: Freezes another player for one turn. Also reduces the other Player's points (by 4-6 points) The Player who plays it also gains points (1-2 points).
 -- Thief card: The Player who plays it steals a card from another Player and places it in their hand. Costs 1 point to play.
+-- Reverse Direction: Contained in the mix-deck, this card reverses the direction of play and grants 4-10 points.
+-- Mass Swap Card: Contained in the mix-deck, this card swaps all the players hands clockwise and grants 2-5 points.
+-- Target Swap Card: Contained in the mix-deck, this card swaps your hand with a target player's hand and grants 3-5 points.
+
 
 Players start with 3 random cards in hand. The remaining cards start in two decks:
 -- the Mixed Deck that contains a mixture of all card types
