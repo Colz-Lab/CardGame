@@ -1,126 +1,146 @@
 public class Visualizations {
 
-        public static void main(String[] args) {
+    static String pointsCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║        Point Card        ║
+            ║                          ║
+            ║          ♦ ♦ ♦           ║
+            ║           ♦ ♦            ║
+            ║            ♦             ║
+            ║                          ║
+            ╠══════════════════════════╣
+            ║       Gain Points        ║
+            ╚══════════════════════════╝
+            """;
 
-            String pointsCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║        Point Card        ║
-                    ║                          ║
-                    ║          ♦ ♦ ♦           ║
-                    ║           ♦ ♦            ║
-                    ║            ♦             ║
-                    ║                          ║
-                    ╠══════════════════════════╣
-                    ║       Gain Points        ║
-                    ╚══════════════════════════╝
-                """;
-
-            System.out.println(pointsCardVisual);
-
-            String freezeCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║       Freeze Card        ║
-                    ║                          ║
-                    ║           ♦ ♦            ║
-                    ║       ♦ ♦ ♦ ♦ ♦ ♦        ║
-                    ║           ♦ ♦            ║
-                    ║                          ║
-                    ╠══════════════════════════╣
-                    ║     Freeze A Player      ║
-                    ╚══════════════════════════╝
-                    """;
-            System.out.println(freezeCardVisual);
-
-            String attackCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║       Attack Card        ║
-                    ║                          ║
-                    ║          ♦ ♦ ♦           ║
-                    ║           ♦ ♦            ║
-                    ║          ♦ ♦ ♦           ║
-                    ║            ♦             ║
-                    ╠══════════════════════════╣
-                    ║     Attack A Player      ║
-                    ╚══════════════════════════╝
-                    """;
-            System.out.println(attackCardVisual);
-
-            String thiefCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║        Thief Card        ║
-                    ║                          ║
-                    ║          ♦ ♦ ♦           ║
-                    ║       ♦ ♦ ♦ ♦ ♦ ♦        ║
-                    ║           ♦ ♦            ║
-                    ║                          ║
-                    ╠══════════════════════════╣
-                    ║   Steal A Players Card   ║
-                    ╚══════════════════════════╝
-                    """;
-            System.out.println(thiefCardVisual);
-
-            String reverseDirectionCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║  Reverse Direction Card  ║
-                    ║                          ║
-                    ║      ♦ ♦ ♦ ♦ ♦           ║
-                    ║            ♦             ║
-                    ║          ♦ ♦ ♦ ♦ ♦       ║
-                    ║                          ║
-                    ╠══════════════════════════╣
-                    ║  Reverse Play Direction  ║
-                    ╚══════════════════════════╝
-                    """;
-            System.out.println(reverseDirectionCardVisual);
-
-            String massSwapCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║      Mass Swap Card      ║
-                    ║                          ║
-                    ║         ♦   ♦   ♦        ║
-                    ║         ♦   ♦   ♦        ║
-                    ║         ♦   ♦   ♦        ║
-                    ║                          ║
-                    ╠══════════════════════════╣
-                    ║   Swap Hands CLockwise   ║
-                    ╚══════════════════════════╝
-                    """;
-            System.out.println(massSwapCardVisual);
-
-            String targetSwapCardVisual = """
-                    ╔══════════════════════════╗
-                    ║      REMPLE RUMBLE       ║
-                    ╠══════════════════════════╣
-                    ║                          ║
-                    ║     Target Swap Card     ║
-                    ║                          ║
-                    ║          ♦    ♦          ║
-                    ║         ♦      ♦         ║
-                    ║        ♦  ♦  ♦  ♦        ║
-                    ║                          ║
-                    ╠══════════════════════════╣
-                    ║ Swap Hands With a Player ║
-                    ╚══════════════════════════╝
-                    """;
-            System.out.println(targetSwapCardVisual);
-        }
+    public static void printPointCardVisual() {
+        System.out.println(pointsCardVisual);
     }
 
+
+    static String freezeCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║       Freeze Card        ║
+            ║                          ║
+            ║           ♦ ♦            ║
+            ║       ♦ ♦ ♦ ♦ ♦ ♦        ║
+            ║           ♦ ♦            ║
+            ║                          ║
+            ╠══════════════════════════╣
+            ║     Freeze A Player      ║
+            ╚══════════════════════════╝
+            """;
+
+    public static void freezeCardVisual() {
+        System.out.println(freezeCardVisual);
+    }
+
+
+    static String attackCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║       Attack Card        ║
+            ║                          ║
+            ║          ♦ ♦ ♦           ║
+            ║           ♦ ♦            ║
+            ║          ♦ ♦ ♦           ║
+            ║            ♦             ║
+            ╠══════════════════════════╣
+            ║     Attack A Player      ║
+            ╚══════════════════════════╝
+            """;
+
+    public static void attackCardVisual() {
+        System.out.println(attackCardVisual);
+    }
+
+    static String thiefCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║        Thief Card        ║
+            ║                          ║
+            ║          ♦ ♦ ♦           ║
+            ║       ♦ ♦ ♦ ♦ ♦ ♦        ║
+            ║           ♦ ♦            ║
+            ║                          ║
+            ╠══════════════════════════╣
+            ║   Steal A Players Card   ║
+            ╚══════════════════════════╝
+            """;
+
+    public static void thiefCardVisual() {
+        System.out.println(thiefCardVisual);
+    }
+
+
+    static String reverseDirectionCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║  Reverse Direction Card  ║
+            ║                          ║
+            ║      ♦ ♦ ♦ ♦ ♦           ║
+            ║            ♦             ║
+            ║          ♦ ♦ ♦ ♦ ♦       ║
+            ║                          ║
+            ╠══════════════════════════╣
+            ║  Reverse Play Direction  ║
+            ╚══════════════════════════╝
+            """;
+
+    public static void reverseDirectionCardVisual() {
+        System.out.println(reverseDirectionCardVisual);
+    }
+
+    static String massSwapCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║      Mass Swap Card      ║
+            ║                          ║
+            ║         ♦   ♦   ♦        ║
+            ║         ♦   ♦   ♦        ║
+            ║         ♦   ♦   ♦        ║
+            ║                          ║
+            ╠══════════════════════════╣
+            ║   Swap Hands CLockwise   ║
+            ╚══════════════════════════╝
+            """;
+
+    public static void massSwapCardVisual() {
+        System.out.println(massSwapCardVisual);
+    }
+
+
+    static String targetSwapCardVisual = """
+            ╔══════════════════════════╗
+            ║      REMPEL RUMBLE       ║
+            ╠══════════════════════════╣
+            ║                          ║
+            ║     Target Swap Card     ║
+            ║                          ║
+            ║          ♦    ♦          ║
+            ║         ♦      ♦         ║
+            ║        ♦  ♦  ♦  ♦        ║
+            ║                          ║
+            ╠══════════════════════════╣
+            ║ Swap Hands With a Player ║
+            ╚══════════════════════════╝
+            """;
+
+    public static void targetSwapCardVisual() {
+        System.out.println(targetSwapCardVisual);
+    }
+}
