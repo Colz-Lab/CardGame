@@ -105,4 +105,12 @@ public class Player {
         }
         System.out.println(" | ----- ----- ----- ");
     }
+
+    public ArrayList<Card> getHand(){
+        return this.hand;
+    }
+
+    public void setHand(ArrayList<Card> newHand){
+        this.hand = newHand;
+    }
 }
