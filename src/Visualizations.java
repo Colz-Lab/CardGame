@@ -2,6 +2,7 @@ public class Visualizations {
     public static void main(String[] args) {
     }
 
+    // Below is all the ASCII art printouts with their various methods to call upon.
     static String pointsCardVisual = """
             ╔══════════════════════════╗
             ║      REMPEL RUMBLE       ║
@@ -117,7 +118,7 @@ public class Visualizations {
             ║         ♦   ♦   ♦        ║
             ║                          ║
             ╠══════════════════════════╣
-            ║   Swap Hands CLockwise   ║
+            ║   Swap Hands Clockwise   ║
             ╚══════════════════════════╝
             """;
 
@@ -144,5 +145,39 @@ public class Visualizations {
 
     public static void targetSwapCardVisual() {
         System.out.println(targetSwapCardVisual);
+    }
+
+
+    // Instanceof is used to check the actual type of the object, if the check is true,
+    // that matching visual card will be printed
+    public static void displayCard(Card card) {
+
+        if (card instanceof PointCard) {
+            printPointCardVisual();
+        }
+
+        else if (card instanceof AttackCard) {
+            attackCardVisual();
+        }
+
+        else if (card instanceof FreezeCard) {
+            freezeCardVisual();
+        }
+
+        else if (card instanceof ThiefCard) {
+            thiefCardVisual();
+        }
+
+        else if (card instanceof ReverseDirectionCard) {
+            reverseDirectionCardVisual();
+        }
+
+        else if (card instanceof MassSwapCard) {
+            massSwapCardVisual();
+        }
+
+        else if (card instanceof TargetSwapCard) {
+            targetSwapCardVisual();
+        }
     }
 }

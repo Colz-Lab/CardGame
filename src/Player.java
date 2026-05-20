@@ -17,6 +17,10 @@ public class Player {
         // select a random card from our hand to play
         int randomCardIndex = Rand.randomInt(0, hand.size());
         Card randomCard = hand.remove(randomCardIndex);
+
+        System.out.println(name + " played:");
+        Visualizations.displayCard(randomCard);  // Display the card ASCII art after it gets played
+
         randomCard.play(this, players);
 
         // pick a random player (but not oneself) to apply any additional actions to
