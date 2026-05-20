@@ -23,7 +23,8 @@ public class ReverseDirectionCard extends Card {
 
     public void reverseDir(Player currentPlayer, ArrayList<Player> allPlayers){
         int playerIndex = allPlayers.indexOf(currentPlayer);
-        ArrayList<Player> newPlayerOrder = null;
+        ArrayList<Player> newPlayerOrder;
+        newPlayerOrder = new ArrayList<Player>();
         for(int i=0; i<allPlayers.size(); i++){
             if(playerIndex == allPlayers.size()-1){
                 playerIndex=0;
