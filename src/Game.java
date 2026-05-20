@@ -16,6 +16,11 @@ public class Game {
     private float pointCardChances; // % chance (from 0-1) of generating a point card
     private float attackCardChances; // % chance (from 0-1) of generating an attack card
     private float freezeCardChances; // % chance (from 0-1) of generating a freeze card
+    private float massSwapCardChances; // % chance (from 0-1) of generating a mass swap card
+    private float reverseDirectionCardChances; // % chance (from 0-1) of generating a reverse direction card
+    private float targetSwapCardChances; // % chance (from 0-1) of generating a target swap card
+
+
     //private float thiefCardChances; // thief card chances are the leftovers of the other chances
 
     private float chancesOfDamageCardBeingInDamageDeck; // % chance of a generated damage card being added to the damage-only deck
@@ -170,9 +175,13 @@ public class Game {
         pointCardChances = 0.5f; // must be between 0 and 1
         attackCardChances = 0.25f; // must be between 0 and 1
         freezeCardChances = 0.15f; // must be between 0 and 1
+        massSwapCardChances = 0.05f; // must be between 0 and 1
+        reverseDirectionCardChances = 0.05f; // must be between 0 and 1
+        targetSwapCardChances = 0.05f; // must be between 0 and 1
+
 
         // thief card chances should be positive based on the math, but check just to be safe
-        float thiefCardChances = 1f - (pointCardChances + attackCardChances + freezeCardChances);
+        float thiefCardChances = 1f - (pointCardChances + attackCardChances + freezeCardChances + massSwapCardChances + reverseDirectionCardChances + targetSwapCardChances );
         if (thiefCardChances < 0f) {
             System.out.println("ERROR: Card chances are not all positive.");
         }
@@ -209,6 +218,24 @@ public class Game {
                 } else {
                     mixedDeck.add(newFreezeCard);
                 }
+            }
+
+            // % chance of creating a mass swap card
+            else if (randomValue < pointCardChances + attackCardChances + freezeCardChances + massSwapCardChances){
+                MassSwapCard newMassSwapCard = new MassSwapCard();
+                mixedDeck.add(newMassSwapCard);
+            }
+
+            // % chance of creating a reverse direction card
+            else if (randomValue < pointCardChances + attackCardChances + freezeCardChances + massSwapCardChances + reverseDirectionCardChances){
+                ReverseDirectionCard newReverseDirectionCard = new ReverseDirectionCard();
+                mixedDeck.add(newReverseDirectionCard);
+            }
+
+            // % chance of creating a target swap card
+            else if (randomValue < pointCardChances + attackCardChances + freezeCardChances + massSwapCardChances + reverseDirectionCardChances + targetSwapCardChances){
+                TargetSwapCard newTargetSwapCard = new TargetSwapCard();
+                mixedDeck.add(newTargetSwapCard);
             }
 
             // % chance of creating a thief card
