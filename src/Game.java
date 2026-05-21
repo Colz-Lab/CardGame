@@ -182,7 +182,6 @@ public class Game {
 
         // thief card chances should be positive based on the math, but check just to be safe
         float thiefCardChances = 1f - (pointCardChances + attackCardChances + freezeCardChances + massSwapCardChances + reverseDirectionCardChances + targetSwapCardChances );
-        System.out.println(thiefCardChances);
         if (thiefCardChances < 0f) {
             System.out.println("ERROR: Card chances are not all positive.");
         }
