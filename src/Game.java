@@ -175,13 +175,14 @@ public class Game {
         pointCardChances = 0.5f; // must be between 0 and 1
         attackCardChances = 0.25f; // must be between 0 and 1
         freezeCardChances = 0.15f; // must be between 0 and 1
-        massSwapCardChances = 0.05f; // must be between 0 and 1
+        massSwapCardChances = 0.025f; // must be between 0 and 1
         reverseDirectionCardChances = 0.05f; // must be between 0 and 1
-        targetSwapCardChances = 0.05f; // must be between 0 and 1
+        targetSwapCardChances = 0.025f; // must be between 0 and 1
 
 
         // thief card chances should be positive based on the math, but check just to be safe
         float thiefCardChances = 1f - (pointCardChances + attackCardChances + freezeCardChances + massSwapCardChances + reverseDirectionCardChances + targetSwapCardChances );
+        System.out.println(thiefCardChances);
         if (thiefCardChances < 0f) {
             System.out.println("ERROR: Card chances are not all positive.");
         }
