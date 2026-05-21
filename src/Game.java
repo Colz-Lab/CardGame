@@ -169,7 +169,7 @@ public class Game {
 
 
         // Deck settings
-        totalNumberOfCards = 20;
+        totalNumberOfCards = 30;
         chancesOfDamageCardBeingInDamageDeck = 0.4f;
 
         pointCardChances = 0.5f; // must be between 0 and 1
