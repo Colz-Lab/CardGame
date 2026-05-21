@@ -23,15 +23,17 @@ public class ReverseDirectionCard extends Card {
 
     public void reverseDir(Player currentPlayer, ArrayList<Player> allPlayers){
         int playerIndex = allPlayers.indexOf(currentPlayer);
-        ArrayList<Player> newPlayerOrder;
-        newPlayerOrder = new ArrayList<Player>();
-        for(int i=0; i<allPlayers.size(); i++){
-            if(playerIndex == allPlayers.size()-1){
-                playerIndex=0;
-            }
+        ArrayList<Player> newPlayerOrder = new ArrayList<Player>();
+        for(int i = 0; i < allPlayers.size(); i++){
             newPlayerOrder.add(allPlayers.get(playerIndex));
+            playerIndex--;
+
+            if(playerIndex < 0){
+                playerIndex = allPlayers.size() - 1;
+            }
         }
-        allPlayers = newPlayerOrder;
+        allPlayers.clear();
+        allPlayers.addAll(newPlayerOrder);
     }
 
     @Override
